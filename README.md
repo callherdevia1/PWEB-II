@@ -15,7 +15,7 @@ Object-Oriented Programming adalah tentang penulisan prosedur atau fungsi yang m
 - [JobSheet 2](#)
 - [JobSheet 3](#)
 
-## 📧 Kontak Saya
+## 📧 Contact
 * **Email**: [deviakippuw.stu@pnc.ac.id](mailto:deviakippuw.stu@pnc.ac.id)
 
 * **Instagram**: [@deviakippuw](https://instagram.com/deviakippuw)
