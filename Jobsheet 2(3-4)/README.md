@@ -37,7 +37,7 @@ Constructor didefinisikan dengan nama ```__construct```. Construct sendiri memil
 
 - <b>OUTPUT IMPLEMENTASI CONSTRUCTOR</b>
 
-
+![Screenshot 2024-09-10 141732](https://github.com/user-attachments/assets/97161710-b252-4332-8548-84cf13311dbb) <br>
 ## Metode Tambahan 
 ```bahs
 public function updateJurusan($jurusanBaru) {
