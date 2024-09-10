@@ -33,7 +33,11 @@ public function __construct ($nama, $nim, $jurusan){
         $this->jurusan = $jurusan;
     }
 ```
-Constructor didefinisikan dengan nama ```__construct```. Construct sendiri memiliki peran penting dalam memberikan nilai awal pada atribut-atribut kelas ketika objek baru diciptakan.
+Constructor didefinisikan dengan nama ```__construct```. Construct sendiri memiliki peran penting dalam memberikan nilai awal pada atribut-atribut kelas ketika objek baru diciptakan.<br>
+
+- <b>OUTPUT IMPLEMENTASI CONSTRUCTOR</b>
+
+
 ## Metode Tambahan 
 ```bahs
 public function updateJurusan($jurusanBaru) {
