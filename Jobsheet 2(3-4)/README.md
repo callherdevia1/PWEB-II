@@ -50,7 +50,7 @@ perubahan jurusan.<br>
 
 - <b>OUTPUT METODE TAMBAHAN</b>
 
-
+![Screenshot 2024-09-10 142204](https://github.com/user-attachments/assets/4c9fcc8d-ed87-4c90-b818-092c162f66b6) <br>
 ## Atribut dan Metode
 ```bahs
 public function setNim($nimBaru) {
@@ -63,6 +63,9 @@ $mahasiswa1->setNim ("230102032");
 echo $mahasiswa1->tampilkanData();
 ```
 ```tampilkanData()```digunakan untuk menampilkan data mahasiswa yang sudah diperbarui<br>
+
+- <b>OUTPUT ATRIBUT METODE</b>
+
 ## TUGAS
 ```
 <?php
