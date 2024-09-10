@@ -32,6 +32,10 @@ public function tampilkanData() {
 }
 ```
 Metode atau methods merupakan fungsi yang didefinisikan dalam class, yang biasanya digunakan untuk melakukan operasi atau perintah pada objek.
+
+- <b>OUTPUT CLASS DAN OBJECT</b> <br>
+![Screenshot 2024-09-10 111545](https://github.com/user-attachments/assets/38ea06df-9161-4b7c-8c87-f68480a25c65) <br>
+
 ## Enkapsulasi (Encapsulation)<br>
 ```bash
     private $nama;
@@ -53,6 +57,9 @@ Encapsulation digunakan untuk menyembunyikan detail internal dari suatu objek da
   - Getter digunakan untuk mengambil atau mengakses nilai dari atribut private atau protected.
   - Setter digunakan untuk mengatur atau mengubah nilai dari atribut private atau protected.
   Pada encapsulation akses melalui metode getter dan setter, serta kontrol lebih pada akses dan modifikasi data.
+
+- <b>OUTPUT ENKAPSULASI(ENCAPSULATION)</b><br>
+![Screenshot 2024-09-10 111612](https://github.com/user-attachments/assets/e372d3b6-9a51-486c-87ff-b3af643791aa) <br>
 ## Inheritance (Pewarisan)<br>
 ```bash
 class Dosen extends Pengguna { 
@@ -75,6 +82,9 @@ Inheritance atau pewarisan sifat merupakan class turunan dari class yang lainnya
 ```bash
 $dosen1 = new Dosen("Prih Diantono Abda'u", "Pemrograman Web 2 PHP");
 ```
+
+- <b>OUTPUT INHERITANCE (PEWARISAN)</b><br>
+![Screenshot 2024-09-10 111633](https://github.com/user-attachments/assets/987bb67f-057c-4246-a4f4-17a0874a396b) <br>
 ## Polymorphism (Polimorfisme)<br>
 ```bash
 public function getNama() {
@@ -126,6 +136,8 @@ Polymorphism adalah kemampuan untuk menggunakan objek dari berbagai class yang m
   $mahasiswa1->aksesFitur(); //Output dari fitur mahasiswa
   ?>
   ```
+  - <b>OUTPUT POLYMORPHISM</b><br>
+  ![Screenshot 2024-09-10 111701](https://github.com/user-attachments/assets/3db6f497-93fc-4d55-a72c-becc8b8a2160)<br>
 ## Abstraction <br>
 Abstraction merupakan konsep di mana kita hanya menampilkan informasi penting dari sebuah objek dan menyembunyikan detail implementasi yang tidak diperlukan, untuk fokus pada apa yang dilakukan suatu objek daripada bagaimana cara kerjanya.
 ```bash
@@ -140,14 +152,5 @@ abstract class Pengguna {
     abstract public function aksesFitur();
 }
 ```
-## Output Jobsheet 1
-1. Class dan Object<br>
-![Screenshot 2024-09-10 111545](https://github.com/user-attachments/assets/38ea06df-9161-4b7c-8c87-f68480a25c65) <br>
-2. Enkapsulasi (Encapsulation)<br>
-![Screenshot 2024-09-10 111612](https://github.com/user-attachments/assets/e372d3b6-9a51-486c-87ff-b3af643791aa) <br>
-3. Inheritance (Pewarisan)<br>
-![Screenshot 2024-09-10 111633](https://github.com/user-attachments/assets/987bb67f-057c-4246-a4f4-17a0874a396b) <br>
-4. Polymorphism (Polimorfisme)<br>
-![Screenshot 2024-09-10 111701](https://github.com/user-attachments/assets/3db6f497-93fc-4d55-a72c-becc8b8a2160) <br>
-5. Abstraction<br>
+ - <b>OUTPUT ABSTRACTION</b><br>
 ![Screenshot 2024-09-10 111719](https://github.com/user-attachments/assets/875eb6bc-e7f8-44a0-9d5d-0ac786a89250) <br>
