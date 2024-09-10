@@ -2,8 +2,8 @@
 
 Repository ini dibuat untuk Tugas Mata Kuliah Pemrograman Web 2 mengenai materi Object-Oriented Programming (OOP).<br>
 OOP merupakan pemrograman yang berfokus pada konsep objek, konsep dasar ini seperti class dan object dalam kode program.<br> <br>
-## Konsep Dasar OOP<br>
-## Class dan Object<br>
+## Konsep Dasar OOP
+## Class dan Object
 ## Kelas (Class)
  ```bash 
  class Mahasiswa { 
@@ -15,7 +15,7 @@ $mahasiswa1 = new Mahasiswa("Devia Herena Kippuw", "230202031","Komputer dan Bis
 ```
 Object merupakan Instance dari class yang memiliki atribut (properties) dan perilaku
 (methods) yang dapat memanipulasi data atau menjalankan fungsi tertentu. <br>
-## Atribut dan Metode<br>
+## Atribut dan Metode
 ## Atribut (Attribute)<br>
 ```bash
     public $nama;
@@ -24,6 +24,6 @@ Object merupakan Instance dari class yang memiliki atribut (properties) dan peri
 ```
 - Public adalah atribut yang dapat diakses dari luar class tanpa batasan atau dapat diakses dari mana saja
 - Private adalah atribut yang hanya dapat diakses dari dalam class itu sendiri dan tidak bisa dipanggil dari luar class.
-- Protected adalah atribut yang dapat diakses oleh class itu sendiri dan dari dalam class turunannya serta tidak dari luar classnya.
+- Protected adalah atribut yang dapat diakses oleh class itu sendiri dan dari dalam class turunannya serta tidak dari luar classnya.</h2?
 ## Metode (Methods)
 
