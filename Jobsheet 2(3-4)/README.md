@@ -118,3 +118,7 @@ $dosen1= new Dosen("Annas Setiawan Prabowo","198711172018031001","Konsep Basis D
 echo $dosen1->tampilkanDosen()."<br>";
 ```
 membuat objek ```$dosen1= new Dosen``` untuk merepresentasikan data dan perilaku yang berkaitan dengan dosen di dalam program, serta memanggil metode dengan ```tampilkanDosen()```.
+
+- <b>OUTPUT TUGAS</b><br>
+
+![Screenshot 2024-09-10 143039](https://github.com/user-attachments/assets/ec0f2c36-548f-4cf8-a0b7-74afeb5384ac)
