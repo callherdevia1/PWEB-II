@@ -1,4 +1,104 @@
 <h1>JOBSHEET 2</h1>
 Menggunakan Konsep Kelas dan Objek dalam PHP
 Dalam Jobsheet 2 menerapkan konsep kelas (class) serta objek (object) pada PHP dan menekankan pada pembuatan dan penggunaan kelas serta objek.<br>
+
 ## Class dan Object
+- <b>Class Mahasiswa</b><br>
+  ```bahs
+  class Mahasiswa { //Membuat class mahasiswa
+    public $nama;//atribut nama
+    public $nim; //atribut nim
+    public $jurusan; //atribut jurusan
+  ```
+  Ditahap pertama awal kode membuat class Mahasiswa yang memiliki atribut   seperti nama, nim, dan jurusan. Class merupakan template blueprint yang   digunakan untuk membuat objek-objek mahasiswa yang akan memiliki atribut dan   perilaku tertentu.Atribut bersifat public, artinya bisa diakses dari luar   class.
+- <b>Metode tampilkanData</b><br>
+  ```bahs
+  public function tampilkanData() {
+        return "Mahasiswa ini memiliki nama $this->nama, memiliki NIM $this->nim ,dari Jurusan $this->jurusan.";
+
+    }
+  }
+  ```
+  Pada langkah kedua, membuat sebuah metode atau fungsi bernama   tampilkanData() yang akan menampilkan informasi mengenai objek mahasiswa.<br>
+    ```tampilkanData()``` digunakan untuk mengembalikan string yang berisi   informasi mengenai mahasiswa yang diinstansiasi.
+## Implementasi Constructor
+```bahs
+public function __construct ($nama, $nim, $jurusan){
+        $this->nama = $nama;
+        $this->nim = $nim;
+        $this->jurusan = $jurusan;
+    }
+```
+Constructor didefinisikan dengan nama ```__construct```. Construct sendiri memiliki peran penting dalam memberikan nilai awal pada atribut-atribut kelas ketika objek baru diciptakan.
+## Metode Tambahan 
+```bahs
+public function updateJurusan($jurusanBaru) {
+        $this->jurusan = $jurusanBaru;
+    }
+}
+```
+Metode tambahan berfungsi untuk mengubah jurusan dari objek yang sudah dibuat. Metode ```updateJurusan()``` dalam kelas Mahasiswa yang memungkinkan
+perubahan jurusan.
+## Atribut dan Metode
+```bahs
+public function setNim($nimBaru) {
+        $this->nim = $nimBaru;
+}
+```
+Metode setter pada atribut nim digunakan untuk mengubah atau memperbarui nilai dari atribut nim setelah objek dibuat. Setter digunakan untuk memanipulasi data tanpa harus mengakses atribut secara langsung.
+```
+$mahasiswa1->setNim ("230102032");
+echo $mahasiswa1->tampilkanData();
+```
+```tampilkanData()```digunakan untuk menampilkan data mahasiswa yang sudah diperbarui<br>
+## TUGAS
+```
+<?php
+//Definisi Class
+class Dosen { //Membuat class mahasiswa
+    public $nama;//atribut nama dosen
+    public $nip; //atribut nip dosen
+    public $mataKuliah; //atribut mata kuliah dosen
+
+    //Construct inisialisasi atribut dosen
+    public function __construct ($nama, $nip, $mataKuliah){
+        $this->nama = $nama;
+        $this->nip = $nip;
+        $this->mataKuliah = $mataKuliah;
+    }
+    //Metode menampilkan informasi Dosen
+    public function tampilkanDosen() { //Menampilkan Data Mahasiswa
+        echo "Nama Dosen: " . $this->nama . "<br>";
+        echo "NIP: " . $this->nip . "<br>";
+        echo "Mata Kuliah: " . $this->mataKuliah . "<br>";
+    }
+
+}
+//Instansiasi Objek dari Class Dosen
+$dosen1= new Dosen("Annas Setiawan Prabowo","198711172018031001","Konsep Basis Data");
+echo $dosen1->tampilkanDosen()."<br>"; 
+?>
+```
+- <b>Implementasi kelas Dosen</b>
+```
+class Dosen { //Membuat class mahasiswa
+    public $nama;//atribut nama dosen
+    public $nip; //atribut nip dosen
+    public $mataKuliah; //atribut mata kuliah dosen
+```
+Membuat class Dosen dengan atribut nama, nip, dan juga mataKuliah.<br>
+- <b>Menampilkan Informasi Dosen</b>
+```
+public function tampilkanDosen() { //Menampilkan Data Mahasiswa
+        echo "Nama Dosen: " . $this->nama . "<br>";
+        echo "NIP: " . $this->nip . "<br>";
+        echo "Mata Kuliah: " . $this->mataKuliah . "<br>";
+    }
+```
+Membuat metode ```tampilkanDosen()``` untuk menampilkan informasi dosen.<br>
+- <b>Objek Dari Kelas Dosen</b>
+```
+$dosen1= new Dosen("Annas Setiawan Prabowo","198711172018031001","Konsep Basis Data");
+echo $dosen1->tampilkanDosen()."<br>";
+```
+membuat objek ```$dosen1= new Dosen``` untuk merepresentasikan data dan perilaku yang berkaitan dengan dosen di dalam program, serta memanggil metode dengan ```tampilkanDosen()```.
