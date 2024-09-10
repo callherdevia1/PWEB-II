@@ -2,7 +2,7 @@
 Menggunakan Konsep Kelas dan Objek dalam PHP
 Dalam Jobsheet 2 menerapkan konsep kelas (class) serta objek (object) pada PHP dan menekankan pada pembuatan dan penggunaan kelas serta objek.<br>
 
-## Class dan Object
+## 1. Class dan Object
 - <b>Class Mahasiswa</b><br>
   ```bahs
   class Mahasiswa { //Membuat class mahasiswa
@@ -25,7 +25,7 @@ Dalam Jobsheet 2 menerapkan konsep kelas (class) serta objek (object) pada PHP d
   - <b>OUTPUT CLASS & OBJECT</b><br>
   
   ![Screenshot 2024-09-10 140957](https://github.com/user-attachments/assets/a1386d44-21fd-495c-a3a5-6ebc9d71bde5) <br>
-## Implementasi Constructor
+## 2. Implementasi Constructor
 ```bahs
 public function __construct ($nama, $nim, $jurusan){
         $this->nama = $nama;
@@ -38,7 +38,7 @@ Constructor didefinisikan dengan nama ```__construct```. Construct sendiri memil
 - <b>OUTPUT IMPLEMENTASI CONSTRUCTOR</b>
 
 ![Screenshot 2024-09-10 141732](https://github.com/user-attachments/assets/97161710-b252-4332-8548-84cf13311dbb) <br>
-## Metode Tambahan 
+## 3. Metode Tambahan 
 ```bahs
 public function updateJurusan($jurusanBaru) {
         $this->jurusan = $jurusanBaru;
@@ -51,7 +51,7 @@ perubahan jurusan.<br>
 - <b>OUTPUT METODE TAMBAHAN</b>
 
 ![Screenshot 2024-09-10 142204](https://github.com/user-attachments/assets/4c9fcc8d-ed87-4c90-b818-092c162f66b6) <br>
-## Atribut dan Metode
+## 4. Atribut dan Metode
 ```bahs
 public function setNim($nimBaru) {
         $this->nim = $nimBaru;
@@ -66,6 +66,7 @@ echo $mahasiswa1->tampilkanData();
 
 - <b>OUTPUT ATRIBUT METODE</b>
 
+![Screenshot 2024-09-10 142629](https://github.com/user-attachments/assets/89b28dd1-703f-463f-9b57-919cffbbc635) <br>
 ## TUGAS
 ```
 <?php
