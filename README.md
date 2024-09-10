@@ -1,4 +1,4 @@
-<h1>JOBSHEET 1</h1>
+<h1>TENTANG SAYA</h1>
 
 Repository ini dibuat untuk Tugas Mata Kuliah Pemrograman Web 2 mengenai materi Object-Oriented Programming (OOP).<br>
 OOP merupakan pemrograman yang berfokus pada konsep objek, konsep dasar ini seperti class dan object dalam kode program.<br> <br>
