@@ -3,7 +3,7 @@
 Repository ini dibuat untuk Tugas Mata Kuliah Pemrograman Web 2 mengenai materi Object-Oriented Programming (OOP).<br>
 OOP merupakan pemrograman yang berfokus pada konsep objek, konsep dasar ini seperti class dan object dalam kode program.
 ## Konsep Dasar OOP
-## Class dan Object
+## 1. Class dan Object
 - <b>Kelas (Class)</b>
  ```bash 
  class Mahasiswa { 
@@ -36,7 +36,7 @@ Metode atau methods merupakan fungsi yang didefinisikan dalam class, yang biasan
 - <b>OUTPUT CLASS DAN OBJECT</b> <br>
 ![Screenshot 2024-09-10 111545](https://github.com/user-attachments/assets/38ea06df-9161-4b7c-8c87-f68480a25c65) <br>
 
-## Enkapsulasi (Encapsulation)<br>
+## 2. Enkapsulasi (Encapsulation)<br>
 ```bash
     private $nama;
     private $nim;
@@ -60,7 +60,7 @@ Encapsulation digunakan untuk menyembunyikan detail internal dari suatu objek da
 
 - <b>OUTPUT ENKAPSULASI(ENCAPSULATION)</b><br>
 ![Screenshot 2024-09-10 111612](https://github.com/user-attachments/assets/e372d3b6-9a51-486c-87ff-b3af643791aa) <br>
-## Inheritance (Pewarisan)<br>
+## 3. Inheritance (Pewarisan)<br>
 ```bash
 class Dosen extends Pengguna { 
     private $mataKuliah;//Menambahkan atribut MataKuliah
@@ -85,7 +85,7 @@ $dosen1 = new Dosen("Prih Diantono Abda'u", "Pemrograman Web 2 PHP");
 
 - <b>OUTPUT INHERITANCE (PEWARISAN)</b><br>
 ![Screenshot 2024-09-10 111633](https://github.com/user-attachments/assets/987bb67f-057c-4246-a4f4-17a0874a396b) <br>
-## Polymorphism (Polimorfisme)<br>
+## 4. Polymorphism (Polimorfisme)<br>
 ```bash
 public function getNama() {
     return $this->nama;
@@ -138,7 +138,7 @@ Polymorphism adalah kemampuan untuk menggunakan objek dari berbagai class yang m
   ```
   - <b>OUTPUT POLYMORPHISM</b><br>
   ![Screenshot 2024-09-10 111701](https://github.com/user-attachments/assets/3db6f497-93fc-4d55-a72c-becc8b8a2160)<br>
-## Abstraction <br>
+## 5. Abstraction <br>
 Abstraction merupakan konsep di mana kita hanya menampilkan informasi penting dari sebuah objek dan menyembunyikan detail implementasi yang tidak diperlukan, untuk fokus pada apa yang dilakukan suatu objek daripada bagaimana cara kerjanya.
 ```bash
 abstract class Pengguna {
