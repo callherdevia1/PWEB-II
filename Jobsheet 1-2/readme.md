@@ -141,3 +141,13 @@ abstract class Pengguna {
 }
 ```
 ## Output Jobsheet 1
+1. Class dan Object<br>
+![Screenshot 2024-09-10 111545](https://github.com/user-attachments/assets/38ea06df-9161-4b7c-8c87-f68480a25c65) <br>
+2. Enkapsulasi (Encapsulation)<br>
+![Screenshot 2024-09-10 111612](https://github.com/user-attachments/assets/e372d3b6-9a51-486c-87ff-b3af643791aa) <br>
+3. Inheritance (Pewarisan)<br>
+![Screenshot 2024-09-10 111633](https://github.com/user-attachments/assets/987bb67f-057c-4246-a4f4-17a0874a396b) <br>
+4. Polymorphism (Polimorfisme)<br>
+![Screenshot 2024-09-10 111701](https://github.com/user-attachments/assets/3db6f497-93fc-4d55-a72c-becc8b8a2160) <br>
+5. Abstraction<br>
+![Screenshot 2024-09-10 111719](https://github.com/user-attachments/assets/875eb6bc-e7f8-44a0-9d5d-0ac786a89250) <br>
