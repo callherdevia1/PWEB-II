@@ -46,7 +46,11 @@ public function updateJurusan($jurusanBaru) {
 }
 ```
 Metode tambahan berfungsi untuk mengubah jurusan dari objek yang sudah dibuat. Metode ```updateJurusan()``` dalam kelas Mahasiswa yang memungkinkan
-perubahan jurusan.
+perubahan jurusan.<br>
+
+- <b>OUTPUT METODE TAMBAHAN</b>
+
+
 ## Atribut dan Metode
 ```bahs
 public function setNim($nimBaru) {
