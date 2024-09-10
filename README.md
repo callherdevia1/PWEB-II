@@ -11,7 +11,7 @@ Repository ini dibuat untuk Tugas Mata Kuliah Pemrograman Web 2 mengenai materi 
 Object-Oriented Programming adalah tentang penulisan prosedur atau fungsi yang melakukan operasi pada data, sedangkan pemrograman berorientasi objek adalah tentang pembuatan objek yang berisi data dan fungsi. Dalam OOP, konsep dasar seperti class dan object digunakan untuk memodelkan masalah dunia nyata ke dalam kode program. Prinsip dasar OOP termasuk Encapsulation, Inheritance, Polymorphism, dan juga Abstraction yang memungkinkan kode lebih terstruktur.
 
 ## 🗒️ Daftar Isi
-- [JobSheet 1](#)
+- [JobSheet 1](https://github.com/callherdevia1/PWEB-II/tree/main/Jobsheet%201-2)
 - [JobSheet 2](#)
 - [JobSheet 3](#)
 
