@@ -5,9 +5,13 @@ OOP merupakan pemrograman yang berfokus pada konsep objek, konsep dasar ini sepe
 ## Konsep Dasar OOP<br>
 ## Class dan Object<br>
 ## Kelas (Class)
- ```class Mahasiswa {```<br>
+ ```bash 
+ class Mahasiswa { 
+ ```
  Class merupakan template cetak biru atau Blueprint untuk menciptakan suatu objek. Class mendefinisikan atribut dan metode yang akan dimiliki oleh objek yang dibuat dari class tersebut.<br>
 ## Objek (Object)
-```$mahasiswa1 = new Mahasiswa("Devia Herena Kippuw", "230202031","Komputer dan Bisnis");```<br>
+```bash
+$mahasiswa1 = new Mahasiswa("Devia Herena Kippuw", "230202031","Komputer dan Bisnis");
+```
 Object merupakan Instance dari class yang memiliki atribut (properties) dan perilaku
 (methods) yang dapat memanipulasi data atau menjalankan fungsi tertentu. <br>
