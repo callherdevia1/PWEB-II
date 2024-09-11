@@ -6,16 +6,17 @@ Dalam Jobsheet 3 Memahami dan menerapkan konsep Inheritance dalam PHP, Menerapka
 - <b>Kelas Person</b> <br>
   ```
   class Person { //Membuat Class Person
-      protected $name; //Atribut menyimpan Nama
+    protected $name; //Atribut menyimpan Nama
 
-      public function __construct($name) {
-          $this->name = $name;
-      }
-      //Metode mendapatkan nama
-        public function getName() {
+    //Metode mendapatkan nama
+    public function getName() {
         return $this->name;
-      }
-     }
+    }
+    
+    // Setter untuk mengatur nama
+    public function setName($name) {
+        $this->name = $name;
+    }
     ```
   Pada tahap pertama Jobsheet 3 Inheritance, membuat kelas person.Kelas         Person merupakan kelas induk yang digunakan sebagai dasar untuk kelas Dosen   dan Mahasiswa.<br>
   ```name atau$name``` bersifat protected yang berarti hanya bisa diakses       oleh kelas itu sendiri dan turunannya.
@@ -30,29 +31,22 @@ Dalam Jobsheet 3 Memahami dan menerapkan konsep Inheritance dalam PHP, Menerapka
         return $this->name;
       }
     ```
-    ```getName()``` berfungsi untuk mengambil dan juga mendapatkan nilai dari          atribut ```name```.
+    ```getName()``` berfungsi untuk mengambil dan juga mendapatkan nilai dari          atribut ```name```.```setname()``` berfungsi untuk menetapkan nilai
 - <b>Kelas Student Mewarisi Person</b> <br>
   ```
-    class Student extends Person {
-      private $studentID;
+    class Student extends Person { //atribut studentID dan getStudentID
+    private $studentID;
 
-      public function __construct($name, $studentID) {
-          parent::__construct($name);
-          $this->studentID = $studentID;
-      }
+    public function getStudentID() {
+        return $this->studentID;
+    }
 
-      public function getStudentID() {
-          return $this->studentID;
-      }
+    public function setStudentID($studentID) {
+        $this->studentID = $studentID;
     }
     ```
   Interheritance memiliki ciri khas pewarisan dengan code ```extends```.        mewarisi properti dan metode dari kelas induknya.<br>
-  ```parent::__construct($name)``` konstruktor dari kelas induk (Person) akan    dijalankan
-  - Details:
-    ```
-    class Student extends Person {
-    ```
-    Ditahap ini kelas student yang mewarisi dari class person serta                menambahkan atribut ```studentID``` dan juga dengan                            metode```getStudentID()```
+  Ditahap ini kelas student yang mewarisi dari class person serta                menambahkan atribut ```studentID``` dan juga dengan                            metode```getStudentID()```
   - Details getStudent:
     ```
     public function getStudentID() {
@@ -66,16 +60,21 @@ Dalam Jobsheet 3 Memahami dan menerapkan konsep Inheritance dalam PHP, Menerapka
 - <b>Kelas Teacher mewarisi Person</b> <br>
   ```
   class Teacher extends Person {
-      private $teacherID;
+    private $teacherID;
 
-      public function __construct($name, $teacherID) {
-          parent::__construct($name);
-          $this->teacherID = $teacherID;
-      }
+    //Metode mendapatkan TeacherID
+    public function getTeacherID() {
+        return $this->teacherID;
+    }
+    
+    public function setTeacherID($teacherID) {
+        $this->teacherID = $teacherID;
+    }
 
-      public function getTeacherID() {
-          return $this->teacherID;
-      }
+    // Override metode getName() untuk Teacher
+    public function getName() {
+        return "Teacher: " . $this->name;
+    }
   ```
   Pada Polymorphism kelas Teacher mewarisi dari Class Person dengan melakukan
   ```extends``` serta menambahkan atribut ```teacherID```.
@@ -84,7 +83,7 @@ Dalam Jobsheet 3 Memahami dan menerapkan konsep Inheritance dalam PHP, Menerapka
     class Teacher extends Person {
         private $teacherID;
     ```
-  Menambahkan Override metode getName() di kelas Student dan Teacher untuk       menampilkan format berbeda.
+  Menambahkan Override metode getName() di kelas Student dan Teacher untuk      menampilkan format yang berbeda.
   - Details:
     ```
       // Override metode getName() untuk Teacher
@@ -100,10 +99,6 @@ Dalam Jobsheet 3 Memahami dan menerapkan konsep Inheritance dalam PHP, Menerapka
 ```
 class Person { 
     private $name;
-
-    public function __construct($name) {
-        $this->name = $name;
-    }
 
     // Setter untuk name
     public function setName($name) {
@@ -164,7 +159,7 @@ class Student extends Person {
       }
     }
     ```
-  Setter dan Getter digunakan untuk mengakses dan memodifikasi nilai atribut    name dan studentID secara terkendali.
+  Setter dan Getter digunakan untuk mengakses dan memodifikasi nilai atribut    name dan studentID supaya terstuukturu dan mudah dipahami.
 
   - <b>OUTPUT ENCAPSULATION</b> <br>
      ![Screenshot 2024-09-11 105211](https://github.com/user-attachments/assets/cdf8dc75-fbd2-4695-b9db-7a066801b037) <br>
@@ -173,15 +168,11 @@ class Student extends Person {
 - <b>Kelas Abstrak Course Dengan Metode Abstrak getCourseDetails().</b>
   ```
     abstract class Course {
-      protected $courseName;
+    protected $courseName;
 
-      public function __construct($courseName) {
-          $this->courseName = $courseName;
-      }
-
-      // Metode abstrak
-      abstract public function getCourseDetails();
-    }
+    // Metode abstrak
+    abstract public function getCourseDetails();
+  }
   ```
   Kelas Course dideklarasikan sebagai abstrak, yang berarti kelas ini tidak     dapat diinstansiasi langsung. Metode ```getCourseDetails()``` juga            dideklarasikan sebagai abstrak, yang harus diimplementasikan oleh kelas       turunannya.
 
@@ -189,36 +180,36 @@ class Student extends Person {
   - Details Online Course:
     ```
       class OnlineCourse extends Course {
-      private $platform;
+    private $platform;
 
-      public function __construct($courseName, $platform) {
-          parent::__construct($courseName);
-          $this->platform = $platform;
-      }
+    public function setAttribbutes($courseName, $platform) {
+        $this->courseName = $courseName;
+        $this->platform = $platform;
+    }
 
-      // Implementasi metode abstrak
-      public function getCourseDetails() {
-          return "Online Course: " . $this->courseName . " di aplikasi " .         $this->platform;
-      }
+    // Implementasi metode abstrak
+    public function getCourseDetails() {
+        return "Online Course: " . $this->courseName . " di aplikasi " .           $this->platform;
+    }
     }
     ```
   - Details Offline Course
     ```
-      class OfflineCourse extends Course {
-      private $location;
-
-      public function __construct($courseName, $location) {
-        parent::__construct($courseName);
-        $this->location = $location;
-      }
-
-      // Implementasi metode abstrak
-      public function getCourseDetails() {
-      return "Offline Course: " . $this->courseName . " di tempat " . $this-        >location;
-      }
+        class OfflineCourse extends Course {
+          private $location;
+    
+        public function setAttribbutes($courseName, $location) {
+            $this->courseName = $courseName;
+            $this->location = $location;
+        }
+    
+        // Implementasi metode abstrak
+        public function getCourseDetails() {
+            return "Offline Course: " . $this->courseName . " di tempat " .         $this->location;
+        }
     }
     ```
-    Kelas OnlineCourse dan OfflineCourse merupakan kelas turunan dari kelas       abstrak Course. Kelas OnlineCourse dan             OfflineCourse mengimplementasikan ```getCourseDetails()``` pada kelas ```Course```.
+    Kelas OnlineCourse dan OfflineCourse merupakan kelas turunan dari kelas       abstrak Course. Kelas OnlineCourse dan OfflineCourse mengimplementasikan       ```getCourseDetails()``` pada kelas ```Course```.
 
   - <b>OUTPUT ABSTRACTION</b> <br>
      ![Screenshot 2024-09-12 025901](https://github.com/user-attachments/assets/28377f8a-bd99-4e10-9a8d-a01dfc9fb5ff) <br>
