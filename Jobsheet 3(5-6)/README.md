@@ -57,6 +57,9 @@ Dalam Jobsheet 3 Memahami dan menerapkan konsep Inheritance dalam PHP, Menerapka
           return $this->studentID;
       }
     ```
+  - <b>OUTPUT INHERITANCE</b> <br>
+    ![Screenshot 2024-09-11 105116](https://github.com/user-attachments/assets/feb14c27-74a5-4aee-8425-b2c2f6d71cf4) <br>
+    
 ## 2. Polymorphism
 - <b>Kelas Teacher mewarisi Person</b> <br>
   ```
@@ -88,6 +91,9 @@ Dalam Jobsheet 3 Memahami dan menerapkan konsep Inheritance dalam PHP, Menerapka
         }
     }
     ```
+  - <b>OUTPUT POLYMORPHISM</b> <br>
+    ![Screenshot 2024-09-11 105146](https://github.com/user-attachments/assets/d463814f-ac95-41a4-ab51-fb2e52f8675c) <br>
+    
 ## 3. Encapsulation
 ```
 class Person { 
@@ -158,6 +164,9 @@ class Student extends Person {
     ```
   Setter dan Getter digunakan untuk mengakses dan memodifikasi nilai atribut    name dan studentID secara terkendali.
 
+  - <b>OUTPUT ENCAPSULATION</b> <br>
+     ![Screenshot 2024-09-11 105211](https://github.com/user-attachments/assets/cdf8dc75-fbd2-4695-b9db-7a066801b037) <br>
+    
 ## 4. Abstraction 
 - <b>Kelas Abstrak Course Dengan Metode Abstrak getCourseDetails().</b>
   ```
@@ -207,4 +216,8 @@ class Student extends Person {
       }
     }
     ```
-    Kelas OnlineCourse dan OfflineCourse merupakan kelas turunan dari kelas       abstrak Course. Kelas OnlineCourse dan OfflineCourse mengimplementasikan      ```getCourseDetails()``` pada kelas ```Course```.
+    Kelas OnlineCourse dan OfflineCourse merupakan kelas turunan dari kelas       abstrak Course. Kelas OnlineCourse dan             OfflineCourse mengimplementasikan ```getCourseDetails()``` pada kelas ```Course```.
+
+  - <b>OUTPUT ABSTRACTION</b> <br>
+     ![Screenshot 2024-09-11 105236](https://github.com/user-attachments/assets/1f7af117-1d3c-42ae-be55-f3a033a54d66) <br>
+    
