@@ -4,7 +4,8 @@ class Mahasiswa { //Membuat class mahasiswa
     public $nama;//atribut nama
     public $nim; //atribut nim
     public $jurusan; //atribut jurusan
-
+                 
+    //Menambahkan construct pada kelas mahasiswa
     public function __construct ($nama, $nim, $jurusan){
         $this->nama = $nama;
         $this->nim = $nim;
