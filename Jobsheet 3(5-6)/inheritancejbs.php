@@ -7,6 +7,10 @@ class Person { //Membuat Class Person
         return $this->name;
     }
               
+    public function setName() {
+        $this->name = name;
+    }
+              
 }
 //Class student mewarisi dari person
 class Student extends Person { //atribut studentID dan getStudentID
@@ -15,13 +19,16 @@ class Student extends Person { //atribut studentID dan getStudentID
     public function getStudentID() {
         return $this->studentID;
     }
+    public function getStudentID() {
+        $this->studentID = $studentID;
+    }
 
 }
 
 //Instansiasi Objek Dari Class Student
 $person1 = new Student();
-$person1->name ="Devia Kippuw";
-$person1->studentID ="230202031";
+$person1->setname ="Devia Kippuw";
+$person1->setstudentID ="230202031";
 
 //Menampilkan Data Student
 echo "Nama Person: " ."<br>" . $person1->getName() . "<br>"; 
