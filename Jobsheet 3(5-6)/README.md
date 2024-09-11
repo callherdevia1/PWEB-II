@@ -224,6 +224,7 @@ class Student extends Person {
      ![Screenshot 2024-09-11 105236](https://github.com/user-attachments/assets/1f7af117-1d3c-42ae-be55-f3a033a54d66) <br>
     
 <h1>🗒️ TUGAS</h1><br>
+
 ## 1. Implementasi Kelas Person Sebagai Induk Dosen dan Mahasiswa
    ```
       class Person {
@@ -242,7 +243,8 @@ class Student extends Person {
       }
     }
    ```
-  Class dibuat dengan nama ```Person``` sebagai induk dari Dosen dan juga       Mahasiswa
+
+Class dibuat dengan nama ```Person``` sebagai induk dari Dosen dan juga       Mahasiswa
 ## 2. Inheritance Kelas Dosen dan Mahasiswa
   - Kelas Dosen:
   ```
