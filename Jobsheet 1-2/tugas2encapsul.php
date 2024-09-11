@@ -6,13 +6,6 @@ class Mahasiswa {
     private $nim;
     private $jurusan;
 
-    //Construct 
-    public function __construct ($nama, $nim,$jurusan) {
-        $this->nama = $nama;
-        $this->nim = $nim;
-        $this->jurusan = $jurusan;
-    }
-
     //Getter dan setter untuk atribut nama, nim, jurusan
     //Getter Nama
     public function getNama() {
@@ -46,7 +39,10 @@ class Mahasiswa {
     }
 }
 //Instansiasi Objek
-$mahasiswa1 = new Mahasiswa("Devia Herena Kippuw", "230202031","Komputer dan Bisnis");
-$mahasiswa1->setNama("Devia Herena Kippuw"); //Output Pemrograman PHP
+$mahasiswa1 = new Mahasiswa();
+$mahasiswa1->setNama("Devia Herena Kippuw");
+$mahasiswa1->setNim("230202031");
+$mahasiswa1->setJurusan("Komputer dan Bisnis");
+//Menampilkan Data
 $mahasiswa1->tampilkanData();
 ?>
