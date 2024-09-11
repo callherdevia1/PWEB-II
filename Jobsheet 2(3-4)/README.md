@@ -20,7 +20,7 @@ Dalam Jobsheet 2 menerapkan konsep kelas (class) serta objek (object) pada PHP d
   }
   ```
   Pada langkah kedua, membuat sebuah metode atau fungsi bernama   tampilkanData() yang akan menampilkan informasi mengenai objek mahasiswa.<br>
-    ```tampilkanData()``` digunakan untuk mengembalikan string yang berisi   informasi mengenai mahasiswa yang diinstansiasi.<br>
+    ```tampilkanData()``` digunakan untuk menampilkan informasi mengenai mahasiswa yang diinstansiasi.<br>
     
   - <b>OUTPUT CLASS & OBJECT</b><br>
   
