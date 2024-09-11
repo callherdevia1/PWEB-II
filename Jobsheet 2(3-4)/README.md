@@ -70,18 +70,13 @@ echo $mahasiswa1->tampilkanData();
 ## TUGAS
 ```
 <?php
-//Definisi Class
-class Dosen { //Membuat class mahasiswa
+<?php
+//Class Dosen
+class Dosen { 
     public $nama;//atribut nama dosen
     public $nip; //atribut nip dosen
     public $mataKuliah; //atribut mata kuliah dosen
 
-    //Construct inisialisasi atribut dosen
-    public function __construct ($nama, $nip, $mataKuliah){
-        $this->nama = $nama;
-        $this->nip = $nip;
-        $this->mataKuliah = $mataKuliah;
-    }
     //Metode menampilkan informasi Dosen
     public function tampilkanDosen() { //Menampilkan Data Mahasiswa
         echo "Nama Dosen: " . $this->nama . "<br>";
@@ -91,13 +86,17 @@ class Dosen { //Membuat class mahasiswa
 
 }
 //Instansiasi Objek dari Class Dosen
-$dosen1= new Dosen("Annas Setiawan Prabowo","198711172018031001","Konsep Basis Data");
+$dosen1= new Dosen();
+$dosen1->nama = "Annas Setiawan Prabowo";
+$dosen1->nip = "198711172018031001";
+$dosen1->mataKuliah = "Konsep Basis Data";
+//Menampilkan Data Dosen Menggunakan tampilkanDosen()
 echo $dosen1->tampilkanDosen()."<br>"; 
 ?>
 ```
 - <b>Implementasi kelas Dosen</b>
 ```
-class Dosen { //Membuat class mahasiswa
+class Dosen { 
     public $nama;//atribut nama dosen
     public $nip; //atribut nip dosen
     public $mataKuliah; //atribut mata kuliah dosen
@@ -114,8 +113,11 @@ public function tampilkanDosen() { //Menampilkan Data Mahasiswa
 Membuat metode ```tampilkanDosen()``` untuk menampilkan informasi dosen.<br>
 - <b>Objek Dari Kelas Dosen</b>
 ```
-$dosen1= new Dosen("Annas Setiawan Prabowo","198711172018031001","Konsep Basis Data");
-echo $dosen1->tampilkanDosen()."<br>";
+$dosen1= new Dosen();
+$dosen1->nama = "Annas Setiawan Prabowo";
+$dosen1->nip = "198711172018031001";
+$dosen1->mataKuliah = "Konsep Basis Data";
+echo $dosen1->tampilkanDosen()."<br>"; 
 ```
 membuat objek ```$dosen1= new Dosen``` untuk merepresentasikan data dan perilaku yang berkaitan dengan dosen di dalam program, serta memanggil metode dengan ```tampilkanDosen()```.
 
