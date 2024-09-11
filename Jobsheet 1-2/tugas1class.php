@@ -8,14 +8,14 @@ class Mahasiswa {
 
     // Metode atau Function tampil Data
     public function tampilkanData() {
-        return "Nama: $this->nama, NIM: $this->nim, Jurusan: $this->jurusan";
+        return "Nama: $this->nama<br>NIM: $this->nim<br>Jurusan: $this->jurusan<br>";
     }
 }
 
 // Instansiasi dari kelas mahasiswa
 $mahasiswa1 = new Mahasiswa();
-$mahasiswa1 = nama ="Devia Herena Kippuw" . "<br>";
-$mahasiswa1 = nim ="230202031" . "<br>";
-$mahasiswa1 = jurusan ="Komputer dan Bisnis" . "<br>";
+$mahasiswa1 = nama ="Devia Herena Kippuw";
+$mahasiswa1 = nim ="230202031" ;
+$mahasiswa1 = jurusan ="Komputer dan Bisnis";
 echo $mahasiswa1->tampilkanData(); //Menampilkan Data Mahasiswa
 ?>
