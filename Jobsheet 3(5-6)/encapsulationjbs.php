@@ -26,7 +26,7 @@ class Student extends Person {
         $this->studentID = $studentID;
     }
 
-    // Override metode getName() untuk Student
+    // override metode getName() untuk Student
     public function getName() {
         return "Student: " . parent::getName();
     }
@@ -38,6 +38,10 @@ class Teacher extends Person {
     public function getTeacherID() {
         return $this->teacherID;
     }
+    
+    public function setTeacherID($teacherID) {
+        $this->teacherID = $teacherID;
+    }
 
     // Override metode getName() untuk Teacher
     public function getName() {
@@ -48,12 +52,12 @@ class Teacher extends Person {
 // Instansiasi objek dari kelas Student
 $student1 = new Student();
 $student1->setName("Devia Kippuw");
-$studentID->setStudentID("230202031");
+$student1->setStudentID("230202031");
 
 // Instansiasi objek dari kelas Teacher
 $teacher1 = new Teacher();
 $teacher1->setName("Bara Mulia Lubis");
-$teacher1->teacherID("2002111785431");
+$teacher1->setTeacherID("2002111785431");
 
 // Menampilkan data Student
 echo "Nama Person: " . "<br>" . $student1->getName() . "<br>"; 
