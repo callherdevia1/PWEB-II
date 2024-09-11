@@ -6,20 +6,16 @@ class Mahasiswa {
     public $nim;
     public $jurusan;
 
-    // Constructur
-    public function __construct($nama, $nim,$jurusan) {
-        $this->nama = $nama;
-        $this->nim = $nim;
-        $this->jurusan = $jurusan;
-    }
-
-    // Metode atau Function
+    // Metode atau Function tampil Data
     public function tampilkanData() {
         return "Nama: $this->nama, NIM: $this->nim, Jurusan: $this->jurusan";
     }
 }
 
-// Instansiasi Objek Dari Class Mahasiswa
-$mahasiswa1 = new Mahasiswa("Devia Herena Kippuw", "230202031","Komputer dan Bisnis");
+// Instansiasi dari kelas mahasiswa
+$mahasiswa1 = new Mahasiswa();
+$mahasiswa1 = nama ="Devia Herena Kippuw";
+$mahasiswa1 = nim ="230202031";
+$mahasiswa1 = jurusan ="Komputer dan Bisnis";
 echo $mahasiswa1->tampilkanData(); //Menampilkan Data Mahasiswa
 ?>
