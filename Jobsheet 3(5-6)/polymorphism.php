@@ -51,3 +51,4 @@ echo "Student ID: " .  $student1->getStudentID() . "<br> <br>";
 // Menampilkan data Teacher
 echo "Nama Person: " . "<br>" .  $teacher1->getName() . "<br>"; 
 echo "Teacher ID: " . $teacher1->getTeacherID() . "<br>"; 
+?>
