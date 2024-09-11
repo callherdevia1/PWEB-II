@@ -1,10 +1,6 @@
 <?php
-class Person { 
+class Person { //Membuat class person
     protected $name;
-
-    public function __construct($name) {
-        $this->name = $name;
-    }
 
     public function getName() {
         return $this->name;
@@ -14,11 +10,7 @@ class Person {
 class Student extends Person {
     private $studentID;
 
-    public function __construct($name, $studentID) {
-        parent::__construct($name);
-        $this->studentID = $studentID;
-    }
-
+   
     public function getStudentID() {
         return $this->studentID;
     }
@@ -28,14 +20,10 @@ class Student extends Person {
         return "Student: " . $this->name;
     }
 }
-
+//Class teacher mewarisi person
 class Teacher extends Person {
     private $teacherID;
 
-    public function __construct($name, $teacherID) {
-        parent::__construct($name);
-        $this->teacherID = $teacherID;
-    }
 
     public function getTeacherID() {
         return $this->teacherID;
@@ -47,15 +35,19 @@ class Teacher extends Person {
     }
 }
 
-// Instansiasi objek dari kelas Student dan Teacher
-$student1 = new Student("Devia Kippuw", "230202031");
-$teacher1 = new Teacher("Bara Mulia Lubis", "2002111785431");
+// Instansiasi objek dari kelas Student
+$student1 = new Student();
+$student1->name = "Devia Kippuw";
+$student1->studentID = "230202031";
+// Instansiasi objek dari kelas Teacher
+$teacher1 = new Teacher();
+$teacher1->name ="Bara Mulia Lubis";
+$teacher1->name ="2002111785431";
 
 // Menampilkan data Student
-echo "Nama Person: " . "<br>" . $student1->getName() . "<br>"; // Output: Student: Devia Kippuw
-echo "Student ID: " .  $student1->getStudentID() . "<br> <br>"; // Output: Student ID: 230202031
+echo "Nama Person: " . "<br>" . $student1->getName() . "<br>"; 
+echo "Student ID: " .  $student1->getStudentID() . "<br> <br>"; 
 
 // Menampilkan data Teacher
-echo "Nama Person: " . "<br>" .  $teacher1->getName() . "<br>"; // Output: Teacher: Bara Mulia Lubis
-echo "Teacher ID: " . $teacher1->getTeacherID() . "<br>"; // Output: Teacher ID: 20021117854314
-?>
+echo "Nama Person: " . "<br>" .  $teacher1->getName() . "<br>"; 
+echo "Teacher ID: " . $teacher1->getTeacherID() . "<br>"; 
