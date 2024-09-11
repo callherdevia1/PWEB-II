@@ -219,55 +219,71 @@ class Student extends Person {
 ## 1. Implementasi Kelas Person Sebagai Induk Dosen dan Mahasiswa
    ```
       class Person {
-      protected $name;
+        protected $name;
 
-      public function __construct($name) {
-          $this->name = $name;
-      }
-
-      public function getRole() {
+        // Metode untuk menampilkan peran, yang akan dioverride oleh kelas            turunan
+        public function getRole() {
           return "Undefined Role";
       }
 
       public function getName() {
           return $this->name;
       }
-    }
+    
+      public function setName($name) {
+        $this->name = $name;
+      }
+     }
    ```
 
 Class dibuat dengan nama ```Person``` sebagai induk dari Dosen dan juga       Mahasiswa
 ## 2. Inheritance Kelas Dosen dan Mahasiswa
   - Kelas Dosen:
   ```
-    class Dosen extends Person {
-    private $nidn;
+   class Dosen extends Person {
+    private $nidn; // Encapsulasi
 
-    public function __construct($name, $nidn) {
-        parent::__construct($name);
+    // Setter dan getter untuk NIDN (Encapsulasi)
+    public function setNidn($nidn) {
         $this->nidn = $nidn;
     }
 
+    public function getNidn() {
+        return $this->nidn;
+    }
+    
+
+    // Polymorphism: metode getRole untuk Dosen
     public function getRole() {
         return "Dosen";
     }
-  }
+}
   ```
+- Details:
+  ```class Dosen extends Person {```
+  
 Ditahap kedua menggunakan konsep Inheritance atau pewarisan untuk membuat hierarki kelas Dosen. Inheritance khas dengan ```extends```.
   - Kelas Mahasiswa:
 ```
     class Mahasiswa extends Person {
-    private $nim;
+    private $nim; // Encapsulation
 
-    public function __construct($name, $nim) {
-        parent::__construct($name);
+    // Setter dan getter untuk NIM (Encapsulation)
+    public function setNim($nim) {
         $this->nim = $nim;
+    }
+
+    public function getNim() {
+        return $this->nim;
     }
 
     public function getRole() {
         return "Mahasiswa";
     }
-  }
+}
 ```
+- Details:
+  ```class Mahasiswa extends Person { ```
 Menggunakan konsep Inheritance atau pewarisan untuk membuat hierarki kelas Mahasiswa. Inheritance pewarisan khas dengan ```extends```.
 ## 3. Menerapkan Polymorphism Dengan Membuat Metode getRole()
 ```
@@ -328,25 +344,50 @@ Setter ```setNidn()```dan ```setNim()``` digunakan untuk menetapkan nilai ke atr
 abstract class Jurnal {
     protected $title;
 
-    public function __construct($title) {
+    public function setTitle($title) {
         $this->title = $title;
     }
-
-    abstract public function submitJurnal();
-}
+    
+    public function getTitle() {
+        return $this->title;
+    }
 
 class JurnalDosen extends Jurnal {
     public function submitJurnal() {
-        return "Jurnal Dosen: " . $this->title . " Pengajuan Jurnal oleh Dosen";
+        return "Jurnal Dosen: " . $this->getTitle() . " Pengajuan Jurnal oleh Dosen";
     }
 }
 
+// Kelas JurnalMahasiswa sebagai turunan dari Jurnal
 class JurnalMahasiswa extends Jurnal {
     public function submitJurnal() {
-        return "Jurnal Mahasiswa: " . $this->title . " Pengajuan Jurnal oleh Mahasiswa";
+        return "Jurnal Mahasiswa: " . $this->getTitle() . " Pengajuan Jurnal oleh Mahasiswa";
     }
 }
 ```
 Kelas ```Jurnal``` adalah kelas abstrak, dan kelas turunannya JurnalDosen dan juga  ```JurnalMahasiswa``` untuk mengimplementasikan metode ```submitJurnal()``` dengan caranya sendiri.
+
+- <b>Instansiasi Object Dosen</b>
+  ```
+  $dosen1 = new Dosen();
+  $dosen1->setName("Prih Diantono Abda'u");
+  $dosen1->setNidn("123456789");
+  ```
+- <b>Instansiasi Object Mahasiswa</b>
+  ```
+  $mahasiswa1 = new Mahasiswa();
+  $mahasiswa1->setName("Devia Kippuw");
+  $mahasiswa1->setNim("230202031");
+  ```
+- <b>Instansiasi Object Jurnal Dosen</b>
+  ```
+  $jurnalDosen = new JurnalDosen();
+  $jurnalDosen->setTitle("Pemrograman Web 1 dan 2");
+  ```
+- <b>Instansiasi Object Jurnal Mahasiswa</b>
+  ```
+  $jurnalMahasiswa = new JurnalMahasiswa();
+  $jurnalMahasiswa->setTitle("Komputer dan Bisnis");
+  ```
 - <b>OUTPUT TUGAS</b> <br>
   ![Screenshot 2024-09-11 125030](https://github.com/user-attachments/assets/a80e342c-0cf1-47ad-aab7-2ff393784bcc)
