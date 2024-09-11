@@ -17,7 +17,8 @@ Dalam Jobsheet 3 Memahami dan menerapkan konsep Inheritance dalam PHP, Menerapka
       }
      }
     ```
-  Pada tahap pertama Jobsheet 3 Inheritance, membuat kelas person.<br>
+  Pada tahap pertama Jobsheet 3 Inheritance, membuat kelas person.Kelas         Person merupakan kelas induk yang digunakan sebagai dasar untuk kelas Dosen   dan Mahasiswa.<br>
+  ```name atau$name``` bersifat protected yang berarti hanya bisa diakses       oleh kelas itu sendiri dan turunannya.
   - Details:
     ```
      class Person {
@@ -29,7 +30,7 @@ Dalam Jobsheet 3 Memahami dan menerapkan konsep Inheritance dalam PHP, Menerapka
         return $this->name;
       }
     ```
-    ```getName()``` berfungsi untuk mengambil dan juga mendapatkan nilai dari          atribut sebelumnya.
+    ```getName()``` berfungsi untuk mengambil dan juga mendapatkan nilai dari          atribut ```name```.
 - <b>Kelas Student Mewarisi Person</b> <br>
   ```
     class Student extends Person {
@@ -45,7 +46,8 @@ Dalam Jobsheet 3 Memahami dan menerapkan konsep Inheritance dalam PHP, Menerapka
       }
     }
     ```
-  Interheritance memiliki ciri khas pewarisan dengan code ```extends```.
+  Interheritance memiliki ciri khas pewarisan dengan code ```extends```.        mewarisi properti dan metode dari kelas induknya.<br>
+  ```parent::__construct($name)``` konstruktor dari kelas induk (Person) akan    dijalankan
   - Details:
     ```
     class Student extends Person {
@@ -314,7 +316,8 @@ class Mahasiswa extends Person {
     }
 }
 ```
-Atribut NIDN dan NIM dilindungi ```private```, dan akses ke atribut tersebut dilakukan melalui ```Setter``` dan ```Getter```.
+Atribut NIDN dan NIM dilindungi ```private```, dan akses ke atribut tersebut dilakukan melalui ```Setter``` dan ```Getter```. Getter ```getNidn()``` dan ```getNim()``` digunakan untuk mengambil nilai dari atribut nidn dan nim.<br>
+Setter ```setNidn()```dan ```setNim()``` digunakan untuk menetapkan nilai ke atribut tersebut, memastikan data dapat diakses dan dimodifikasi
 
 ## 5. Kelas Abstrak Jurnal Dan Implementasikan Konsep Abstraction
 ```
@@ -340,4 +343,4 @@ class JurnalMahasiswa extends Jurnal {
     }
 }
 ```
-Kelas Jurnal adalah kelas abstrak, dan kelas turunannya JurnalDosen dan juga  JurnalMahasiswa untuk mengimplementasikan metode submitJurnal() dengan caranya sendiri.
+Kelas ```Jurnal``` adalah kelas abstrak, dan kelas turunannya JurnalDosen dan juga  ```JurnalMahasiswa``` untuk mengimplementasikan metode ```submitJurnal()``` dengan caranya sendiri.
