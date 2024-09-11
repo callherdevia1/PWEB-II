@@ -22,7 +22,7 @@ class Mahasiswa {
 }
 //Instansiasi & Update Jurusan
 $mahasiswa1= new Mahasiswa();
-$mahasiswa1->nama = "Devia Herena Kippuw";
+$mahasiswa1->nama = "Devia Kippuw";
 $mahasiswa1->nim = "230202031";
 $mahasiswa1->jurusan = "Komputer dan Bisnis";
 
