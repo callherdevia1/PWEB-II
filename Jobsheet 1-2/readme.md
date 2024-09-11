@@ -37,7 +37,7 @@ public function tampilkanData() {
 Metode atau methods merupakan fungsi yang didefinisikan dalam class, yang biasanya digunakan untuk melakukan operasi atau perintah pada objek.
 
 - <b>OUTPUT CLASS DAN OBJECT</b> <br>
-![Screenshot 2024-09-10 111545](https://github.com/user-attachments/assets/38ea06df-9161-4b7c-8c87-f68480a25c65) <br>
+![Screenshot 2024-09-12 011100](https://github.com/user-attachments/assets/3973d56e-9841-4107-bc05-b19b84146849) <br>
 
 ## 2. Enkapsulasi (Encapsulation)<br>
 ```bash
@@ -62,7 +62,7 @@ Encapsulation digunakan untuk menyembunyikan detail internal dari suatu objek da
   Pada encapsulation akses melalui metode getter dan setter, serta kontrol lebih pada akses dan modifikasi data.
 
 - <b>OUTPUT ENKAPSULASI(ENCAPSULATION)</b><br>
-![Screenshot 2024-09-10 111612](https://github.com/user-attachments/assets/e372d3b6-9a51-486c-87ff-b3af643791aa) <br>
+![Screenshot 2024-09-12 011123](https://github.com/user-attachments/assets/1125f9f9-ddf1-41f9-88d5-861d5e647c21) <br>
 ## 3. Inheritance (Pewarisan)<br>
 ```bash
 class Dosen extends Pengguna { 
@@ -93,7 +93,7 @@ $dosen1->setMataKuliah("Pemrograman Web 2 PHP");
 ```
 
 - <b>OUTPUT INHERITANCE (PEWARISAN)</b><br>
-![Screenshot 2024-09-10 111633](https://github.com/user-attachments/assets/987bb67f-057c-4246-a4f4-17a0874a396b) <br>
+![Screenshot 2024-09-12 011146](https://github.com/user-attachments/assets/63cceb43-4069-4171-92a4-9140ab116887) <br>
 ## 4. Polymorphism (Polimorfisme)<br>
 ```
 public function getNama() {
@@ -144,7 +144,7 @@ Polymorphism adalah kemampuan untuk menggunakan objek dari berbagai class yang m
   $mahasiswa1->aksesFitur(); //Output dari fitur mahasiswa
   ```
   - <b>OUTPUT POLYMORPHISM</b><br>
-  ![Screenshot 2024-09-10 111701](https://github.com/user-attachments/assets/3db6f497-93fc-4d55-a72c-becc8b8a2160)<br>
+  ![Screenshot 2024-09-12 011205](https://github.com/user-attachments/assets/0c631051-8dd1-4370-87b1-41c3cc3bfeb1)<br>
 ## 5. Abstraction <br>
 Abstraction merupakan konsep di mana hanya menampilkan informasi penting dari sebuah objek dan menyembunyikan detail implementasi yang tidak diperlukan,fokus pada yang dilakukan suatu objek daripada bagaimana cara kerjanya.
 ```
@@ -161,4 +161,4 @@ abstract class Pengguna {
 }
 ```
  - <b>OUTPUT ABSTRACTION</b><br>
-![Screenshot 2024-09-10 111719](https://github.com/user-attachments/assets/875eb6bc-e7f8-44a0-9d5d-0ac786a89250) <br>
+ ![Screenshot 2024-09-12 011225](https://github.com/user-attachments/assets/3d807213-27ad-41c9-8d11-2b6ec6409bf6) <br>
