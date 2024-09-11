@@ -2,37 +2,28 @@
 class Person { 
     private $name;
 
-    public function __construct($name) {
-        $this->name = $name;
+    // Getter untuk name
+    public function getName() {
+        return $this->name;
     }
-
     // Setter untuk name
     public function setName($name) {
         $this->name = $name;
     }
 
-    // Getter untuk name
-    public function getName() {
-        return $this->name;
-    }
 }
 
 class Student extends Person {
     private $studentID;
 
-    public function __construct($name, $studentID) {
-        parent::__construct($name);
-        $this->studentID = $studentID;
+     // Getter untuk studentID
+    public function getStudentID() {
+        return $this->studentID;
     }
-
+    
     // Setter untuk studentID
     public function setStudentID($studentID) {
         $this->studentID = $studentID;
-    }
-
-    // Getter untuk studentID
-    public function getStudentID() {
-        return $this->studentID;
     }
 
     // Override metode getName() untuk Student
@@ -40,14 +31,9 @@ class Student extends Person {
         return "Student: " . parent::getName();
     }
 }
-
+//Pewarisan Teacher dari Person
 class Teacher extends Person {
     private $teacherID;
-
-    public function __construct($name, $teacherID) {
-        parent::__construct($name);
-        $this->teacherID = $teacherID;
-    }
 
     public function getTeacherID() {
         return $this->teacherID;
@@ -59,19 +45,25 @@ class Teacher extends Person {
     }
 }
 
-// Instansiasi objek dari kelas Student dan Teacher
-$student1 = new Student("Devia Kippuw", "230202031");
-$teacher1 = new Teacher("Bara Mulia Lubis", "2002111785431");
+// Instansiasi objek dari kelas Student
+$student1 = new Student();
+$student1->setName("Devia Kippuw");
+$studentID->setStudentID("230202031");
+
+// Instansiasi objek dari kelas Teacher
+$teacher1 = new Teacher();
+$teacher1->setName("Bara Mulia Lubis");
+$teacher1->teacherID("2002111785431");
 
 // Menampilkan data Student
-echo "Nama Person: " . "<br>" . $student1->getName() . "<br>"; // Output: Student: Devia Kippuw
-echo "Student ID: " .  $student1->getStudentID() . "<br> <br>"; // Output: Student ID: 230202031
+echo "Nama Person: " . "<br>" . $student1->getName() . "<br>"; 
+echo "Student ID: " .  $student1->getStudentID() . "<br> <br>"; 
 
 // Mengubah nama student menggunakan setter
 $student1->setName("Devina Kipuw");
-echo "Nama Person (Setelah diubah): " . "<br>" . $student1->getName() . "<br>"; // Output: Student: Devina Kipuw
+echo "Nama Person (Setelah diubah): " . "<br>" . $student1->getName() . "<br>"; 
 
 // Menampilkan data Teacher
-echo "Nama Person: " . "<br>" .  $teacher1->getName() . "<br>"; // Output: Teacher: Bara Mulia Lubis
-echo "Teacher ID: " . $teacher1->getTeacherID() . "<br>"; // Output: Teacher ID: 2002111785431
+echo "Nama Person: " . "<br>" .  $teacher1->getName() . "<br>"; 
+echo "Teacher ID: " . $teacher1->getTeacherID() . "<br>"; 
 ?>
