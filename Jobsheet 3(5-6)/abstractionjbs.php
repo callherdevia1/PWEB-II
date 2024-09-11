@@ -28,7 +28,7 @@ class OfflineCourse extends Course {
 
     public function setAttribbutes($courseName, $location) {
         $this->courseName = $courseName;
-        $this->platform = $platform;
+        $this->location = $location;
     }
 
     // Implementasi metode abstrak
@@ -39,7 +39,7 @@ class OfflineCourse extends Course {
 
 // Instansiasi objek dari kelas OnlineCourse 
 $onlineCourse = new OnlineCourse();
-$onlineCourse->setAttributtes("Desain Interaksi Pengguna", "Google Meet");
+$onlineCourse->setAttribbutes("Desain Interaksi Pengguna", "Google Meet");
 // Instansiasi objek dari kelas OfflineCourse 
 $offlineCourse = new OfflineCourse();
 $offlineCourse->setAttribbutes("Praktikum Web 2", "GTIL J.5.7");
