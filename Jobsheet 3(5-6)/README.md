@@ -224,7 +224,6 @@ class Student extends Person {
      ![Screenshot 2024-09-11 105236](https://github.com/user-attachments/assets/1f7af117-1d3c-42ae-be55-f3a033a54d66) <br>
     
 <h1>🗒️ TUGAS</h1><br>
-
 ## 1. Implementasi Kelas Person Sebagai Induk Dosen dan Mahasiswa
    ```
       class Person {
@@ -289,7 +288,10 @@ public function getRole() {
 ```
 Menggunakan metode ```public function getRole()``` untuk mengembalikan peran atau identitas dari objek yang memanggilnya. Override metode ini di kelas Dosen dan Mahasiswa untuk menampilkan peran yang
 berbeda.
-
+- Details Penggunaan getRole()
+  ```
+  public function getRole() {
+  ```
 ## 4. Encapsulation Melindungi Atribut NIDN
 ```
 class Dosen extends Person {
@@ -319,6 +321,15 @@ class Mahasiswa extends Person {
 Atribut NIDN dan NIM dilindungi ```private```, dan akses ke atribut tersebut dilakukan melalui ```Setter``` dan ```Getter```. Getter ```getNidn()``` dan ```getNim()``` digunakan untuk mengambil nilai dari atribut nidn dan nim.<br>
 Setter ```setNidn()```dan ```setNim()``` digunakan untuk menetapkan nilai ke atribut tersebut, memastikan data dapat diakses dan dimodifikasi
 
+- Details Melindungi NIDN dan NIM
+  ```
+  private $nidn;
+  ```
+- Details NIM
+  ```
+  private $nim;
+  ```
+
 ## 5. Kelas Abstrak Jurnal Dan Implementasikan Konsep Abstraction
 ```
 abstract class Jurnal {
@@ -344,4 +355,5 @@ class JurnalMahasiswa extends Jurnal {
 }
 ```
 Kelas ```Jurnal``` adalah kelas abstrak, dan kelas turunannya JurnalDosen dan juga  ```JurnalMahasiswa``` untuk mengimplementasikan metode ```submitJurnal()``` dengan caranya sendiri.
-- <b>OUTPUT TUGAS</b>
+- <b>OUTPUT TUGAS</b> <br>
+  ![Screenshot 2024-09-11 125030](https://github.com/user-attachments/assets/a80e342c-0cf1-47ad-aab7-2ff393784bcc)
