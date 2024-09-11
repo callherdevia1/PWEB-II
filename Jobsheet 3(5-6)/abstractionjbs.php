@@ -3,20 +3,16 @@
 abstract class Course {
     protected $courseName;
 
-    public function __construct($courseName) {
-        $this->courseName = $courseName;
-    }
-
     // Metode abstrak
     abstract public function getCourseDetails();
 }
 
-// Kelas OnlineCourse yang mengimplementasikan Course
+// Kelas OnlineCourse mewarisi Course
 class OnlineCourse extends Course {
     private $platform;
 
-    public function __construct($courseName, $platform) {
-        parent::__construct($courseName);
+    public function setAttribbutes($courseName, $platform) {
+        $this->courseName = $courseName;
         $this->platform = $platform;
     }
 
@@ -30,9 +26,9 @@ class OnlineCourse extends Course {
 class OfflineCourse extends Course {
     private $location;
 
-    public function __construct($courseName, $location) {
-        parent::__construct($courseName);
-        $this->location = $location;
+    public function setAttribbutes($courseName, $location) {
+        $this->courseName = $courseName;
+        $this->platform = $platform;
     }
 
     // Implementasi metode abstrak
@@ -41,11 +37,14 @@ class OfflineCourse extends Course {
     }
 }
 
-// Instansiasi objek dari kelas OnlineCourse dan OfflineCourse
-$onlineCourse = new OnlineCourse("Desain Interaksi Pengguna", "Google Meet");
-$offlineCourse = new OfflineCourse("Praktikum Web 2", "PNC Cilacap");
+// Instansiasi objek dari kelas OnlineCourse 
+$onlineCourse = new OnlineCourse();
+$onlineCourse->setAttributtes("Desain Interaksi Pengguna", "Google Meet");
+// Instansiasi objek dari kelas OfflineCourse 
+$offlineCourse = new OfflineCourse();
+$offlineCourse->setAttribbutes("Praktikum Web 2", "GTIL J.5.7");
 
 // Menampilkan detail course
-echo $onlineCourse->getCourseDetails() . "<br>";  // Output: Online Course: Web Development on platform Udemy
-echo $offlineCourse->getCourseDetails() . "<br>"; // Output: Offline Course: Data Science at location New York
+echo $onlineCourse->getCourseDetails() . "<br>";  
+echo $offlineCourse->getCourseDetails() . "<br>"; 
 ?>
