@@ -14,8 +14,8 @@ class Mahasiswa {
 
 // Instansiasi dari kelas mahasiswa
 $mahasiswa1 = new Mahasiswa();
-$mahasiswa1 = nama ="Devia Herena Kippuw";
-$mahasiswa1 = nim ="230202031";
-$mahasiswa1 = jurusan ="Komputer dan Bisnis";
+$mahasiswa1 = nama ="Devia Herena Kippuw" . "<br>";
+$mahasiswa1 = nim ="230202031" . "<br>";
+$mahasiswa1 = jurusan ="Komputer dan Bisnis" . "<br>";
 echo $mahasiswa1->tampilkanData(); //Menampilkan Data Mahasiswa
 ?>
