@@ -221,3 +221,123 @@ class Student extends Person {
   - <b>OUTPUT ABSTRACTION</b> <br>
      ![Screenshot 2024-09-11 105236](https://github.com/user-attachments/assets/1f7af117-1d3c-42ae-be55-f3a033a54d66) <br>
     
+<h1>🗒️ TUGAS</h1><br>
+
+## 1. Implementasi Kelas Person Sebagai Induk Dosen dan Mahasiswa
+   ```
+      class Person {
+      protected $name;
+
+      public function __construct($name) {
+          $this->name = $name;
+      }
+
+      public function getRole() {
+          return "Undefined Role";
+      }
+
+      public function getName() {
+          return $this->name;
+      }
+    }
+   ```
+  Class dibuat dengan nama ```Person``` sebagai induk dari Dosen dan juga       Mahasiswa
+## 2. Inheritance Kelas Dosen dan Mahasiswa
+  - Kelas Dosen:
+  ```
+    class Dosen extends Person {
+    private $nidn;
+
+    public function __construct($name, $nidn) {
+        parent::__construct($name);
+        $this->nidn = $nidn;
+    }
+
+    public function getRole() {
+        return "Dosen";
+    }
+  }
+  ```
+Ditahap kedua menggunakan konsep Inheritance atau pewarisan untuk membuat hierarki kelas Dosen. Inheritance khas dengan ```extends```.
+  - Kelas Mahasiswa:
+```
+    class Mahasiswa extends Person {
+    private $nim;
+
+    public function __construct($name, $nim) {
+        parent::__construct($name);
+        $this->nim = $nim;
+    }
+
+    public function getRole() {
+        return "Mahasiswa";
+    }
+  }
+```
+Menggunakan konsep Inheritance atau pewarisan untuk membuat hierarki kelas Mahasiswa. Inheritance pewarisan khas dengan ```extends```.
+## 3. Menerapkan Polymorphism Dengan Membuat Metode getRole()
+```
+public function getRole() {
+    return "Dosen"; // Di dalam kelas Dosen
+}
+
+public function getRole() {
+    return "Mahasiswa"; // Di dalam kelas Mahasiswa
+}
+```
+Menggunakan metode ```public function getRole()``` untuk mengembalikan peran atau identitas dari objek yang memanggilnya. Override metode ini di kelas Dosen dan Mahasiswa untuk menampilkan peran yang
+berbeda.
+
+## 4. Encapsulation Melindungi Atribut NIDN
+```
+class Dosen extends Person {
+    private $nidn;
+
+    public function setNidn($nidn) {
+        $this->nidn = $nidn;
+    }
+
+    public function getNidn() {
+        return $this->nidn;
+    }
+}
+
+class Mahasiswa extends Person {
+    private $nim;
+
+    public function setNim($nim) {
+        $this->nim = $nim;
+    }
+
+    public function getNim() {
+        return $this->nim;
+    }
+}
+```
+Atribut NIDN dan NIM dilindungi ```private```, dan akses ke atribut tersebut dilakukan melalui ```Setter``` dan ```Getter```.
+
+## 5. Kelas Abstrak Jurnal Dan Implementasikan Konsep Abstraction
+```
+abstract class Jurnal {
+    protected $title;
+
+    public function __construct($title) {
+        $this->title = $title;
+    }
+
+    abstract public function submitJurnal();
+}
+
+class JurnalDosen extends Jurnal {
+    public function submitJurnal() {
+        return "Jurnal Dosen: " . $this->title . " Pengajuan Jurnal oleh Dosen";
+    }
+}
+
+class JurnalMahasiswa extends Jurnal {
+    public function submitJurnal() {
+        return "Jurnal Mahasiswa: " . $this->title . " Pengajuan Jurnal oleh Mahasiswa";
+    }
+}
+```
+Kelas Jurnal adalah kelas abstrak, dan kelas turunannya JurnalDosen dan juga  JurnalMahasiswa untuk mengimplementasikan metode submitJurnal() dengan caranya sendiri.
