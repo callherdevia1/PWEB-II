@@ -66,30 +66,36 @@ Encapsulation digunakan untuk menyembunyikan detail internal dari suatu objek da
 ## 3. Inheritance (Pewarisan)<br>
 ```bash
 class Dosen extends Pengguna { 
-    private $mataKuliah;//Menambahkan atribut MataKuliah
+    private $mataKuliah;
 
     // Konstruktor untuk inisialisasi nama dan mataKuliah
-    public function __construct($nama, $mataKuliah){
-        parent::__construct($nama);
+    public function setMataKuliah($matakuliah) {
         $this->mataKuliah = $mataKuliah;
     }
+    // Metode untuk mengambil mata kuliah
+    public function getMataKuliah() {
+        return $this->mataKuliah;
+    }
+}
 ```
 Inheritance atau pewarisan sifat merupakan class turunan dari class yang lainnya. inheritance di buat dengan membuat class baru, class yang mewariskan disebut parent class, dan class yang mewarisi disebut child class menggunakan keyword <b>extends</b>
 - Membuat class Pengguna dengan atribut nama dan metode getNama().
- ```bash
+ ```
    public function getNama() {
         return $this->nama;
     }
  ```
 - Instansiasi objek dari class Dosen
-```bash
-$dosen1 = new Dosen("Prih Diantono Abda'u", "Pemrograman Web 2 PHP");
+```
+$dosen1 = new Dosen();
+$dosen1->setNama("Prih Diantono Abda'u");
+$dosen1->setMataKuliah("Pemrograman Web 2 PHP");
 ```
 
 - <b>OUTPUT INHERITANCE (PEWARISAN)</b><br>
 ![Screenshot 2024-09-10 111633](https://github.com/user-attachments/assets/987bb67f-057c-4246-a4f4-17a0874a396b) <br>
 ## 4. Polymorphism (Polimorfisme)<br>
-```bash
+```
 public function getNama() {
     return $this->nama;
    }
@@ -131,23 +137,22 @@ Polymorphism adalah kemampuan untuk menggunakan objek dari berbagai class yang m
   ```
 - Instansiasi objek dari class Dosen dan Mahasiswa
   ```bash
-  //Instalisasi objek dari Dosen dan Mahasiswa
-   $dosen1 = new Dosen ();
+  $dosen1 = new Dosen ();
   $dosen1 ->aksesFitur(); //Output Fitur Dosen
   echo "<br>";
   $mahasiswa1 = new Mahasiswa();
   $mahasiswa1->aksesFitur(); //Output dari fitur mahasiswa
-  ?>
   ```
   - <b>OUTPUT POLYMORPHISM</b><br>
   ![Screenshot 2024-09-10 111701](https://github.com/user-attachments/assets/3db6f497-93fc-4d55-a72c-becc8b8a2160)<br>
 ## 5. Abstraction <br>
-Abstraction merupakan konsep di mana kita hanya menampilkan informasi penting dari sebuah objek dan menyembunyikan detail implementasi yang tidak diperlukan, untuk fokus pada apa yang dilakukan suatu objek daripada bagaimana cara kerjanya.
-```bash
+Abstraction merupakan konsep di mana hanya menampilkan informasi penting dari sebuah objek dan menyembunyikan detail implementasi yang tidak diperlukan,fokus pada yang dilakukan suatu objek daripada bagaimana cara kerjanya.
+```
 abstract class Pengguna {
     protected $nama;
 
-    public function __construct($nama) {
+    // Setter untuk mengatur nama
+    public function setNama($nama) {
         $this->nama = $nama;
     }
 
