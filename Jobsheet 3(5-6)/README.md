@@ -344,3 +344,4 @@ class JurnalMahasiswa extends Jurnal {
 }
 ```
 Kelas ```Jurnal``` adalah kelas abstrak, dan kelas turunannya JurnalDosen dan juga  ```JurnalMahasiswa``` untuk mengimplementasikan metode ```submitJurnal()``` dengan caranya sendiri.
+- <b>OUTPUT TUGAS</b>
