@@ -76,14 +76,14 @@ abstract class Jurnal {
 // Kelas JurnalDosen sebagai turunan dari Jurnal
 class JurnalDosen extends Jurnal {
     public function submitJurnal() {
-        return "Jurnal Dosen: " . $this->getTitle() . " Pengajuan Jurnal oleh Dosen";
+        return "Jurnal Dosen " . $this->getTitle() . " telah diajukan";
     }
 }
 
 // Kelas JurnalMahasiswa sebagai turunan dari Jurnal
 class JurnalMahasiswa extends Jurnal {
     public function submitJurnal() {
-        return "Jurnal Mahasiswa: " . $this->getTitle() . " Pengajuan Jurnal oleh Mahasiswa";
+        return "Jurnal Mahasiswa " . $this->getTitle() . " telah diajukan";
     }
 }
 
@@ -97,15 +97,15 @@ $mahasiswa1 = new Mahasiswa();
 $mahasiswa1->setName("Devia Kippuw");
 $mahasiswa1->setNim("230202031");
 
-echo $dosen1->getName() . " adalah " . $dosen1->getRole() . " dengan NIDN: " . $dosen1->getNidn() . "<br>";
-echo $mahasiswa1->getName() . " adalah " . $mahasiswa1->getRole() . " dengan NIM: " . $mahasiswa1->getNim() . "<br>";
+echo $dosen1->getName() . " adalah " . $dosen1->getRole() . " dengan NIDN " . $dosen1->getNidn() . "<br>";
+echo $mahasiswa1->getName() . " adalah " . $mahasiswa1->getRole() . " dengan NIM " . $mahasiswa1->getNim() . "<br>";
 
 // Instansiasi objek Jurnal Dosen
 $jurnalDosen = new JurnalDosen();
-$jurnalDosen->setTitle("Pemrograman Web 1 dan 2");
+$jurnalDosen->setTitle("OOP Pemrograman Web");
 // Instansiasi objek Jurnal Mahasiswa
 $jurnalMahasiswa = new JurnalMahasiswa();
-$jurnalMahasiswa->setTitle("Komputer dan Bisnis");
+$jurnalMahasiswa->setTitle("ERD JKB-LC");
 
 echo $jurnalDosen->submitJurnal() . "<br>";
 echo $jurnalMahasiswa->submitJurnal() . "<br>";
