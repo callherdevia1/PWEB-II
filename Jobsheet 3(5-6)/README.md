@@ -390,4 +390,4 @@ Kelas ```Jurnal``` adalah kelas abstrak, dan kelas turunannya JurnalDosen dan ju
   $jurnalMahasiswa->setTitle("ERD JKB-LC");
   ```
 - <b>OUTPUT TUGAS</b> <br>
-  ![Screenshot 2024-09-11 125030](https://github.com/user-attachments/assets/a80e342c-0cf1-47ad-aab7-2ff393784bcc)
+  ![Screenshot 2024-09-12 075117](https://github.com/user-attachments/assets/aa1e4bdb-2878-4eac-b497-a775d6a24510)
