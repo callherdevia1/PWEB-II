@@ -379,15 +379,18 @@ Kelas ```Jurnal``` adalah kelas abstrak, dan kelas turunannya JurnalDosen dan ju
   $mahasiswa1->setName("Devia Kippuw");
   $mahasiswa1->setNim("230202031");
   ```
+  Menggunakan ```new Mahasiswa()```
 - <b>Instansiasi Object Jurnal Dosen</b>
   ```
   $jurnalDosen = new JurnalDosen();
   $jurnalDosen->setTitle("OOP Pemrograman Web");
   ```
+  Menggunakan ```new JurnalDosen()```
 - <b>Instansiasi Object Jurnal Mahasiswa</b>
   ```
   $jurnalMahasiswa = new JurnalMahasiswa();
   $jurnalMahasiswa->setTitle("ERD JKB-LC");
   ```
+  Menggunakan ```new JurnalMahasiswa()```
 - <b>OUTPUT TUGAS</b> <br>
   ![Screenshot 2024-09-12 075117](https://github.com/user-attachments/assets/aa1e4bdb-2878-4eac-b497-a775d6a24510)
