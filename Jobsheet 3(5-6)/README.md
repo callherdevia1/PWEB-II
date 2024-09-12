@@ -354,14 +354,14 @@ abstract class Jurnal {
 
 class JurnalDosen extends Jurnal {
     public function submitJurnal() {
-        return "Jurnal Dosen: " . $this->getTitle() . " Pengajuan Jurnal oleh Dosen";
+        return "Jurnal Dosen " . $this->getTitle() . " telah diajukan";
     }
 }
 
 // Kelas JurnalMahasiswa sebagai turunan dari Jurnal
 class JurnalMahasiswa extends Jurnal {
     public function submitJurnal() {
-        return "Jurnal Mahasiswa: " . $this->getTitle() . " Pengajuan Jurnal oleh Mahasiswa";
+        return "Jurnal Mahasiswa " . $this->getTitle() . " telah diajukan";
     }
 }
 ```
@@ -382,12 +382,12 @@ Kelas ```Jurnal``` adalah kelas abstrak, dan kelas turunannya JurnalDosen dan ju
 - <b>Instansiasi Object Jurnal Dosen</b>
   ```
   $jurnalDosen = new JurnalDosen();
-  $jurnalDosen->setTitle("Pemrograman Web 1 dan 2");
+  $jurnalDosen->setTitle("OOP Pemrograman Web");
   ```
 - <b>Instansiasi Object Jurnal Mahasiswa</b>
   ```
   $jurnalMahasiswa = new JurnalMahasiswa();
-  $jurnalMahasiswa->setTitle("Komputer dan Bisnis");
+  $jurnalMahasiswa->setTitle("ERD JKB-LC");
   ```
 - <b>OUTPUT TUGAS</b> <br>
   ![Screenshot 2024-09-11 125030](https://github.com/user-attachments/assets/a80e342c-0cf1-47ad-aab7-2ff393784bcc)
